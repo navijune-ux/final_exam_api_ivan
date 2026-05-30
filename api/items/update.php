@@ -1,6 +1,6 @@
 <?php
 
-include "../../db.php";
+include "db.php";
 
 $id = $_REQUEST['id'] ?? '';
 $name = $_REQUEST['name'] ?? '';

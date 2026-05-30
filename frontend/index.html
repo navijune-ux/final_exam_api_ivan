@@ -1,13 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Items API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Manager</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f8;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            max-width:900px;
+            margin:40px auto;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+        }
+
+        p{
+            text-align:center;
+            color:#666;
+        }
+
+        .buttons{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin-top:30px;
+        }
+
+        a{
+            text-decoration:none;
+            padding:12px 20px;
+            border-radius:8px;
+            color:white;
+            font-weight:bold;
+        }
+
+        .add{
+            background:#28a745;
+        }
+
+        .view{
+            background:#007bff;
+        }
+
+        .update{
+            background:#ff9800;
+        }
+
+        .delete{
+            background:#dc3545;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:30px;
+            color:#888;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>My CRUD API</h1>
+<div class="container">
 
-<a href="../api/items/read.php">View Items</a>
+    <h1>CRUD API Item Manager</h1>
+
+    <p>PHP + MySQL Final Exam Project</p>
+
+    <div class="buttons">
+
+        <a class="add"
+        href="../api/items/create.php?name=Phone&description=Android%20Phone&price=10000">
+        Create Item
+        </a>
+
+        <a class="view"
+        href="../api/items/read.php">
+        View Items
+        </a>
+
+        <a class="update"
+        href="../api/items/update.php?id=1&name=Phone%20Updated&description=Android%20Updated&price=12000">
+        Update Item
+        </a>
+
+        <a class="delete"
+        href="../api/items/delete.php?id=2">
+        Delete Item
+        </a>
+
+    </div>
+
+    <footer>
+        Final Exam CRUD API by Ivan
+    </footer>
+
+</div>
 
 </body>
 </html>
