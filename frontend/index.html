@@ -1,111 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Manager</title>
+    <title>Item Manager CRUD API</title>
 
     <style>
         body{
             font-family: Arial, sans-serif;
-            background:#f4f6f8;
-            margin:0;
-            padding:0;
+            background:#f4f4f4;
+            text-align:center;
+            padding:50px;
         }
 
         .container{
-            max-width:900px;
-            margin:40px auto;
             background:white;
+            width:600px;
+            margin:auto;
             padding:30px;
-            border-radius:12px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
         }
 
         h1{
-            text-align:center;
             color:#333;
         }
 
         p{
-            text-align:center;
             color:#666;
         }
 
-        .buttons{
-            display:flex;
-            gap:15px;
-            justify-content:center;
-            margin-top:30px;
-        }
-
-        a{
-            text-decoration:none;
+        .btn{
+            display:inline-block;
+            margin:10px;
             padding:12px 20px;
-            border-radius:8px;
+            text-decoration:none;
             color:white;
+            border-radius:5px;
             font-weight:bold;
         }
 
-        .add{
+        .create{
             background:#28a745;
         }
 
-        .view{
+        .read{
             background:#007bff;
         }
 
         .update{
-            background:#ff9800;
+            background:#ffc107;
+            color:black;
         }
 
         .delete{
             background:#dc3545;
         }
 
-        footer{
-            text-align:center;
-            margin-top:30px;
-            color:#888;
-        }
     </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
-    <h1>CRUD API Item Manager</h1>
+    <h1>Item Manager</h1>
 
-    <p>PHP + MySQL Final Exam Project</p>
+    <p>PHP CRUD API Final Exam Project</p>
 
-    <div class="buttons">
+    <a class="btn create"
+    href="../api/items/create.php?name=Phone&description=Android%20Phone&price=10000">
+    Create Item
+    </a>
 
-        <a class="add"
-        href="../api/items/create.php?name=Phone&description=Android%20Phone&price=10000">
-        Create Item
-        </a>
+    <a class="btn read"
+    href="../api/items/read.php">
+    View Items
+    </a>
 
-        <a class="view"
-        href="../api/items/read.php">
-        View Items
-        </a>
+    <a class="btn update"
+    href="../api/items/update.php?id=1&name=Phone%20Updated&description=Android%20Updated&price=12000">
+    Update Item
+    </a>
 
-        <a class="update"
-        href="../api/items/update.php?id=1&name=Phone%20Updated&description=Android%20Updated&price=12000">
-        Update Item
-        </a>
-
-        <a class="delete"
-        href="../api/items/delete.php?id=2">
-        Delete Item
-        </a>
-
-    </div>
-
-    <footer>
-        Final Exam CRUD API by Ivan
-    </footer>
+    <a class="btn delete"
+    href="../api/items/delete.php?id=2">
+    Delete Item
+    </a>
 
 </div>
 
